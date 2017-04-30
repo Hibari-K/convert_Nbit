@@ -2,9 +2,7 @@
 #include<stdlib.h>
 
 #define BITSIZE 512 * 1024 * 1024
-#define N BITSIZE/32
-#define M BITSIZE/29
-#define DIGITS 2*(BITSIZE/116)
+#define DIGITS 2*(BITSIZE/116) // 116 = 29 * 4
 
 void convert_29bit(int* data, int* result, int digits){
 
