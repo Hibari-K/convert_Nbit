@@ -4,7 +4,7 @@
 #define BITSIZE 512 * 1024 * 1024
 #define DIGITS 2 * (BITSIZE/116) // 116 = 29 * 4
 
-void convert_29bit(int* data, int* result, int digits){
+void convert_29bit(unsigned int* data, unsigned int* result, int digits){
 
     __asm__ volatile("sub $20, %rsp;");
 
