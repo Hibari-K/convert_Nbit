@@ -1,15 +1,13 @@
 #include<stdio.h>
-#include<stdlib.h>
 
 #define BITSIZE 512
 #define N BITSIZE/32 //dataの配列数
 #define M BITSIZE/30 //resultの配列数を決める指標
 #define R BITSIZE - 60 * (BITSIZE / 60) //余りのビット数
 
-
-
 void convert_30bit(int* data, int* result){
 
+    // seek
     long* tmp = (long*)data;
 
     int i;
