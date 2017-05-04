@@ -40,6 +40,7 @@ void convert_31bit(unsigned int* data, unsigned int* result, int digits){
 	"movq -16(%rbp), %rdx;"
 	"xor %rdi, %rdi;"
 	"xor %rsi, %rsi;"
+	"mov -20(%rbp), %ecx;"
 
 	/*
 	 in inner,
@@ -76,7 +77,7 @@ void convert_31bit(unsigned int* data, unsigned int* result, int digits){
 	"movdqa %xmm10, (%rdx, %rsi, 8);"
 	"add $14, %rdi;"
 	"add $2, %rsi;"
-	"cmp -20(%rbp), %esi;"
+	"cmp %ecx, %esi;"
 	"jg _ret;"
 
 	"movdqu (%rbx, %rdi), %xmm0;"
@@ -108,7 +109,7 @@ void convert_31bit(unsigned int* data, unsigned int* result, int digits){
 	"movdqa %xmm10, (%rdx, %rsi, 8);"
 	"add $15, %rdi;"
 	"add $2, %rsi;"
-	"cmp -20(%rbp), %esi;"
+	"cmp %ecx, %esi;"
 	"jle inner;"
 
 	);
