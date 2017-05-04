@@ -8,6 +8,7 @@
 
 void convert_29bit(int* data, int* result){
 
+    // seek
     long* tmp = (long*)data;
 
     int i;
