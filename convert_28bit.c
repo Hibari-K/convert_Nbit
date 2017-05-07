@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 
 #define BITSIZE 512 * 1024 * 1024
 #define DIGITS 2*(BITSIZE/112) // 112 = 28*4
@@ -31,7 +30,7 @@ void convert_28bit(unsigned int* data, unsigned int* result, int digits){
 	"xor %rsi, %rsi;"
 
 	/*
-	 in inner,
+	 in split,
 	 xmm9 : tmp
 	 xmm10: result
 	 */
