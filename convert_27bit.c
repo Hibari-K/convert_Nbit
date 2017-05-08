@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 
 #define BITSIZE 512
 #define N (BITSIZE/32)+4 // size of array "data"
