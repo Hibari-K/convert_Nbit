@@ -5,7 +5,7 @@
 #define M BITSIZE/30 //resultの配列数を決める指標
 #define R BITSIZE - 60 * (BITSIZE / 60) //余りのビット数
 
-void convert_30bit(int* data, int* result){
+void convert_30bit(unsigned int* data,unsigned int* result){
 
     // seek
     long* tmp = (long*)data;
